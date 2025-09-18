@@ -1,0 +1,99 @@
+div > *{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.d1{
+    background-color: aqua;
+    align-content: center;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    border-width: 3px;
+}
+
+.d2{
+    background-color: rgb(78, 171, 60);
+    align-content: center;
+    text-align: center;
+    border: 2px dotted black;
+    padding: 5px;
+    border-width: 3px;
+}
+
+.d3{
+    background-color: rgb(144, 199, 199);
+    align-content: center;
+    text-align: center;
+    border: 2px double black;
+    padding: 5px;
+    border-width: 3px;
+}
+
+.d4{
+    background-color: rgb(191, 173, 73);
+    align-content: center;
+    text-align: center;
+    border: 2px dotted black;
+    padding: 5px;
+    border-width: 3px;
+}
+
+.d5{
+    background-color: rgb(80, 41, 82);
+    align-content: center;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    border-width: 3px;
+}
+
+.d6{
+    background-color: rgb(123, 127, 127);
+    align-content: center;
+    text-align: center;
+    border: 2px dotted black;
+    padding: 5px;
+    border-width: 3px;
+    margin-top: 5px;
+}
+
+.d7{
+    background-color: rgb(237, 185, 155);
+    align-content: center;
+    text-align: center;
+    border: 2px double black;
+    padding: 5px;
+    border-width: 3px;
+}
+
+.d8{
+    background-color: rgb(195, 128, 160);
+    align-content: center;
+    text-align: center;
+    border: 2px dotted black;
+    padding: 5px;
+    padding-top: 5px;
+    border-width: 3px;
+}
+
+.d9{
+    background-color: rgb(129, 147, 120);
+    align-content: center;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    padding-top: 5px;
+    border-width: 3px;
+    margin-top: 5px;
+}
+.pai{
+    width: 700px;
+    margin: 0 auto;
+}
+.pai>*:hover{
+    color: white;
+}

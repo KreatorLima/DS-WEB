@@ -1,0 +1,15 @@
+.div-maior{
+    height: 300px;
+    width: 400px;
+    background-color: rgb(125, 202, 206);
+    margin: auto;
+    align-content: center;
+}
+.div-menor{
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+}
