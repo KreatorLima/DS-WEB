@@ -1,0 +1,155 @@
+/* Cabeçalho */
+.Titulo1 {
+    background-color: rgb(54, 133, 54);
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    padding-top: 2px;
+}
+
+.Titulo-1 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+/* Seção Fórmula 1 */
+.div-f1 {
+    display: flex;              
+    align-items: flex-start;  
+    gap: 20px;
+    margin: 20px 0;             
+    max-width: 1000px;          
+}
+
+
+.img-hamilton {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 550px;
+    height: auto;
+    filter: blur(20px);
+}
+
+.img-hamilton:hover {
+    filter: blur(0px);
+    transition-duration: 0.7s;
+}
+
+
+
+.conteudo-f1 {
+    font-family: "Roboto", sans-serif;
+}
+
+
+.titulo-f1 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.541);
+}
+
+.link-1-pag {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.link-1-pág {
+    text-decoration: none;
+    color: rgb(54, 133, 54);
+    font-size: 30px;
+}
+
+.lista {
+    margin: 0;
+    padding-left: 20px; 
+    font-size: 15px;
+}
+
+
+
+
+
+
+/*Seção futebol*/
+
+.img-pal {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 550px;
+    height: auto;
+    filter: blur(20px);
+}
+
+.img-pal:hover {
+    filter: blur(0px);
+    transition-duration: 0.7s;
+}
+
+
+.div-fut{
+    display: flex;              
+    align-items: flex-start;  
+    gap: 20px;
+    margin: 20px 0;             
+    max-width: 1000px; 
+}
+
+
+.conteudo-fut {
+    font-family: "Roboto", sans-serif;
+}
+
+.titulo-fut {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.541);
+}
+
+
+.link-2-pag {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+
+.link-2-pág {
+    text-decoration: none;
+    color: rgb(54, 133, 54);
+    font-size: 25px;
+}
+
+.direito-pal{
+    margin: 0;
+    padding-left: 20px; 
+    font-size: 15px;
+}
+
+
+
+
+/*seção tabela*/
+
+
+.title-tab{
+    font-size: 50px;
+    color: rgb(46, 178, 46);
+    text-align: left;
+}
+
+
+tr:nth-child(even) { /* linhas pares */
+background-color: rgba(255, 255, 255, 0.973);
+}
+tr:nth-child(odd) { /* linhas ímpares */
+background-color: rgba(46, 178, 46, 0.178);
+}
+
+
+.link-tab{
+    color: rgb(46, 178, 46) ;
+}

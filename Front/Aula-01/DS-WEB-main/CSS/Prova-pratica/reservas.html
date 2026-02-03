@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservas.css">
+    <title>Reserva</title>
+</head>
+<body>
+    <div class="conteudo">
+        <div class="cabecalho">
+                <div class="links">
+                    <div class="link-1"> <a  class="texto-link1" href="cardapio.html">cardápio</a></div>
+                    <div class="link-2"> <a  class="texto-link2" href="promocoes.html">promoções</a></div>
+                    <div class="link-3"> <a  class="texto-link3" href="reservas.html">reserva</a></div>
+                    <div class="link-4"> <a  class="texto-link4" href="index.html">início</a></div>
+                    <h1 class="titulo">Sabor & Arte</h1>
+                </div>
+        </div>
+    </div>
+
+    <center><div class="formulário">
+
+        <h1 class="text-res">Faça sua reserva aqui</h1>
+
+        <form>
+            <label for="nome">Nome</label><br>
+            <input class="nome" type="text" id="nome" name="nome" placeholder="Digite seu nome" maxlength="50" required>
+
+            <br>
+    
+            <label for="telefone">Telefone</label><br>
+            <input class="telefone" type="number" id="telefone" name="telefone" min="1" max="11" placeholder="(XX) xxxxx-xxxx">
+
+            <br>
+            
+            <label for="email">E-mail:</label><br>
+            <input class="email" type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+            <br>
+            
+            <label for="numero de pessoas">Número de pessoas</label><br>
+            <input class="núm-pess" type="number" id="núm-pess" name="numero de pessoas" min="1" max="10" required>
+        
+            <br>
+
+            <label for="opiniao">Diga sua opiniao:</label><br>
+            <textarea id="opiniao" name="opiniao" rows="6" cols="50" max-length="300" placeholder="Seu feedback é muito importante para que possamos melhorar cada vez mais!" required></textarea>
+        
+            <br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div></center>
+</body>
+</html>

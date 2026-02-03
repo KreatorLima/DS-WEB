@@ -1,0 +1,34 @@
+.cartao-1{
+    width: 200px;
+    height: 250px;
+    padding: 15px;
+    margin: 10px;
+    background-color:rgb(219, 84, 97) ;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px 1px rgb(104, 105, 99);
+}
+
+.cartao-2{
+    width: 200px;
+    height: 250px;
+    padding: 15px;
+    margin: 10px;
+    background-color:rgb(224, 225, 221) ;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px 1px rgb(65, 90, 119);
+}
+
+.cartao-3{
+    width: 200px;
+    height: 250px;
+    padding: 15px;
+    margin: 10px;
+    background-color:rgb(228, 230, 195) ;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px 1px rgb(34, 39, 37);
+}
+
+div{
+    display: inline-block;
+    align-content: center;
+}

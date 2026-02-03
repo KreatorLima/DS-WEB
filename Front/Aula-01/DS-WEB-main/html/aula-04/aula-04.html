@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aula - 04 - Formularios</title>
+    </head>
+
+    <body>
+        <h1>Primeiro formulario de cadastro</h1>
+        <form action="processa.php" method="get">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Enviar">
+
+            <br>
+            <br>
+            <br>
+            <hr>
+
+            <input type="radio" id="opcao1" name="escolha" value="1">
+            <label for="opcao1">Primeira opção</label>
+            <input type="radio" id="opcao2" name="escolha" value="2" checked>
+            <label for="opcao2">Segunda Opção</label>
+
+            <br>
+            <br>
+            <br>
+            <hr>
+
+            <input type="checkbox" id="noticias" name="interesses" value="noticias">
+            <label for="noticias">Receber notícias</label>
+            <input type="checkbox" id="promocoes" name="interesses" value="promocoes" checked>
+            <label for="promocoes">Receber promoções</label>
+
+            <br>
+            <br>
+            <br>
+            <hr>
+            
+            <label for="carros">Escolha um carro:</label>
+            <select id="carros" name="carros">
+            <optgroup label="Sedans">
+            <option value="corolla">Toyota Corolla</option>
+            <option value="civic">Honda Civic</option>
+            </optgroup>
+            <optgroup label="SUVs">
+            <option value="crv">Honda CR-V</option>
+            <option value="rav4">Toyota RAV4</option>
+            </optgroup>
+            </select>
+
+            <br>
+            <br>
+            <br>
+            <hr>
+
+            <label for="resumo">Resumo:</label><br>
+            <textarea id="resumo" name="resumo" rows="6" cols="60" max-length="300" required>
+            Sou apaixonado por tecnologia e adoro explorar novas linguagens de programação.
+            </textarea>
+        </form>
+
+            <br>
+            <br>
+            <br>
+            <hr>
+
+            <form action="/submit" method="post">
+                <!-- Campo de texto -->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                <br>
+
+                <!-- Campo de e-mail -->
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                <br>
+                <!-- Campo de senha -->
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <br>
+
+                <!-- Campo numérico -->
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="1" max="120" req
+                uired>
+                </br><br><!-- Utilizado para pular linha para melhorar a visibilidade do e
+                xemplo -->
+                <!-- Botões de rádio -->
+                <label>Gênero:</label>
+                <input type="radio" id="masculino" name="genero" value= "masculino"required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+                </br><br><!-- Utilizado para pular linha para melhorar a visibilidade do e
+                xemplo -->
+                <!-- Caixas de seleção -->
+                <label>Interesses:</label>
+                <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+                <label for="tecnologia">Tecnologia</label>
+                <input type="checkbox" id="esportes" name="interesses" value="esportes">
+                <label for="esportes">Esportes</label>
+                <input type="checkbox" id="arte" name="interesses" value="arte">
+                <label for="arte">Arte</label>
+                </br><br><!-- Utilizado para pular linha para melhorar a visibilidade do e
+                xemplo -->
+                <!-- Botão de envio - submit -->
+                <button type="submit">Enviar</button>
+                </form>
+
+
+
+    </body>
+</html>

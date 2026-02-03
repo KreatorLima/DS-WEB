@@ -1,0 +1,13 @@
+div{
+    background-color: aquamarine;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.menu{
+    background-color: rgb(47, 121, 114);
+    width: 100%;
+    margin: 0 auto;
+}

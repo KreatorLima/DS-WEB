@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    height: 1500px;
+    background-color: #E1E5EE;
+}
+
+.cabecalho{
+    background-color: #2A324B;
+    width: 100%;
+    height: 75px;
+    position:fixed;
+    text-align: center;
+    justify-content: center;
+    z-index: 100;
+    top: 0px;
+}
+
+
+
+
+/*-----Primeiro Link------*/
+.link-1{
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.texto-link1{
+    color: #E1E5EE;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 30px;
+}
+
+.texto-link1:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/*-----Segundo Link------*/
+.link-2{
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.texto-link2{
+    color: #E1E5EE;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 30px;
+}
+
+.texto-link2:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/*-----Terceiro Link------*/
+.link-3{
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.texto-link3{
+    color: #E1E5EE;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 30px;
+}
+
+.texto-link3:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/*-----Quarto Link------*/
+.link-4{
+    display: inline-block;
+    align-content: center;
+    text-align: center;
+}
+
+.texto-link4{
+    color: #E1E5EE;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 30px;
+}
+
+.texto-link4:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/*-----titulo-----*/
+.titulo{
+    color: #E1E5EE;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+/*-----imagem banner e div-----*/
+.banner{
+    width: 500px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.div-foto{
+    position: relative;
+    top: 75px;
+    width: 800px;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+
+
+/*-----texto boas vindas e descrição-----*/
+.subtit{
+    position: relative;
+    top: 65px;
+    align-content: center;
+    text-align: center;
+    color: #2A324B;
+}
+
+.descricao{
+    display: inline-block;
+    position: relative;
+    margin-left: 550px;
+    margin-top: -1000px;
+}

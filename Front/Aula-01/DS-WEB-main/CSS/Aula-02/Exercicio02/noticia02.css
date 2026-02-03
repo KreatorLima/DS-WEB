@@ -1,0 +1,59 @@
+.Titulo3{
+    background-color: rgb(54, 133, 54);
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    padding-top: 2px;
+}
+
+.Titulo-3 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.tit-site2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(54, 133, 54);
+    text-decoration: underline;
+}
+
+.txt1-pag1{
+    text-align: center;
+    font-size: 20px;
+}
+
+.div-img3-vit{
+    text-align: center;
+}
+
+.img3-vit{
+    border-radius: 5px;
+    border: 1px black solid;
+    width: 700px;
+    height: auto;
+}
+
+.frase-pal{
+    text-align: center;
+    font-size: 25px;
+}
+
+.botao-2{
+    background-color: rgb(34, 190, 34);
+    width: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.linkbotao2{
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+}
+
+body{
+    background-color: rgba(219, 236, 219, 0.884);
+}

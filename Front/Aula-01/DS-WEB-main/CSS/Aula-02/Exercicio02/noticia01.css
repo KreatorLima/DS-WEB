@@ -1,0 +1,76 @@
+.Titulo2 {
+    background-color: rgb(54, 133, 54);
+    text-align: center;
+    width: 100%;
+    height: 75px;
+    padding-top: 2px;
+}
+
+.Titulo-2 {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.tit-site1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(54, 133, 54);
+    text-decoration: underline;
+}
+
+.txt1-pag1{
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+.odio{
+    text-align: center;
+    font-size: 25px;
+}
+
+.frase-ham{
+    text-align: center;
+    font-size: medium;
+    margin-top: 5px;
+}
+
+.div-img2-ham{
+    text-align: center;
+}
+
+.img2-ham{
+    border-radius: 5px;
+    border: 1px black solid;
+    width: 700px;
+    height: auto;
+}
+
+.frase-ham2{
+    text-align: center;
+    font-size: 25px;
+}
+
+.frase-ham3{
+    text-align: center;
+    font-size: 25px
+}
+
+.botao-1{
+    background-color: rgb(34, 190, 34);
+    width: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.linkbotao{
+    color: aliceblue;
+    text-decoration: none;
+    text-align: center;
+}
+
+body{
+    background-color: rgba(219, 236, 219, 0.884);
+}
