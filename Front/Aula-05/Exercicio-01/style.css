@@ -1,0 +1,16 @@
+body {
+text-align: center;
+background: #fafafa;
+cursor: url('vigarista.png'), auto;
+}
+
+.area{
+background-image: url("images.jpg");
+margin: 0 auto;
+width: 200px;
+height: 100px;
+border: 1px solid black;
+border-radius: 5px;
+margin: 20px auto;
+padding: 10px;
+}
