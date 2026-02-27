@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.labirinto {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    margin: 30px auto;
+    background: #111;
+    border: 4px solid #444;
+    overflow: hidden;
+}
+
+.parede {
+    position: absolute;
+    background: linear-gradient(180deg, #eee, #bbb);
+    border-radius: 4px;
+}
+
+/* parede secreta parece normal */
+.segredo {
+    background: linear-gradient(180deg, #eee, #bbb);
+}
+
+.player {
+    width: 20px;
+    height: 20px;
+    background: lime;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px lime;
+    z-index: 5;
+}
+
+.enemy {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: crimson;
+    border-radius: 50%;
+    box-shadow: 0 0 15px red;
+}
+
+.final {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: lime;
+    border-radius: 6px;
+}
+
+#timer {
+    position: absolute;
+    width: 700px;
+    top: 200px;
+    left: 0;
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.jumpscare {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.jumpscare img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SALA SECRETA */
+.salaSecreta {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: none; /* O JS muda para flex */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 2s ease-in;
+}
+
+.salaSecreta img {
+    max-width: 90%;
+    max-height: 80vh;
+    border: 5px solid white;
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.salaSecreta h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; filter: grayscale(1); }
+    to { opacity: 1; filter: grayscale(0); }
+}
