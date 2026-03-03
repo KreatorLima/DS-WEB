@@ -2,8 +2,8 @@
 
 //Definindo a classe Pessoa (pai)
 class Pessoa {
-    protected $nome;
-    protected $idade;
+    public $nome;
+    public $idade;
 }
 
 //Definindo a classe Funcionario (filho)
@@ -22,12 +22,12 @@ class Gerente extends Funcionario {
     }
 }
 
-$nome = "Rene";
-$idade = 17;
-$salario = 5000;
+
 $gerente = new Gerente();
-$gerente->setSalario($salario);
-echo "O nome do gerente é: " . $nome . " Ele tem " . $idade . " anos e o salário com bônus é: " . $gerente->calcularBonus() . "<br/>";
+$gerente->nome = "Rene";
+$gerente->idade = 17;
+$gerente->setSalario(5000);
+echo "O nome do gerente é: " . $gerente->nome . " Ele tem " . $gerente->idade . " anos e o salário com bônus é: " . $gerente->calcularBonus() . "<br/>";
 
 //Definindo a classe Desenvolvedor (filho)
 class Desenvolvedor extends Funcionario {
@@ -37,11 +37,9 @@ class Desenvolvedor extends Funcionario {
 }
 
 
-$nome = "Lucas";
-$idade = 17;
-$salario = 5000;
 $desenvolvedor = new Desenvolvedor();
-$desenvolvedor->setSalario($salario);
-echo "O nome do desenvolvedor é: " . $nome . " Ele tem " . $idade . " anos e o salário com bônus é: " . $desenvolvedor->calcularBonus() . "<br/>";
+$desenvolvedor->nome = "Lucas";
+$desenvolvedor->idade = 17;
+$desenvolvedor->setSalario(1000);
+echo "O nome do desenvolvedor é: " . $desenvolvedor->nome . " Ele tem " . $desenvolvedor->idade . " anos e o salário com bônus é: " . $desenvolvedor->calcularBonus() . "<br/>";
 ?>
-

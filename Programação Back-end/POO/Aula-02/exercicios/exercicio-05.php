@@ -48,5 +48,7 @@ $cpf = new CPF();
 $cpf->setNumero("491.972.278-89");
 
 echo $cpf->validar() ? "CPF válido" : "CPF inválido";
+echo "<br>";
+echo "Número do CPF: " . $cpf->getNumero();
 
 ?>
