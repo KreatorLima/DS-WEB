@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="categorias.html">Categorias</a></li>
+        <li><a href="#about"></a></li>
+    </ul>
+
+    <div class="formulario">
+        <h3>Cadastro de Produtos</h3>
+        <label for="nome">Nome do Produto</label>
+        <input type="text" id="nome" name="nome">
+
+        <br><br>
+
+        <label for="preco">Preço do Produto</label>
+        <input type="number" id="preco" name="preco">
+
+        <br><br>
+
+        <select action="C:\xampp\htdocs\Cafeteria-API\controllers\produtos.php" name="selecao" id="selecao">
+            <option value="5">Selecione um valor</option>
+        </select>
+
+        <br><br>
+
+        <label for="disponivel">Disponivel?</label>
+        <input type="checkbox" name="disponivel" id="disponivel">
+
+        <br><br>
+        
+        <button type="button" id="botaoEnviar" class="button button-enviar">Cadastrar</button>
+    </div>
+
+    
+
+    <div id="resposta" class="tabela">
+        
+    </div>
+</body>
+<script src="./assets/js/produtos.js"></script>
+</html>
