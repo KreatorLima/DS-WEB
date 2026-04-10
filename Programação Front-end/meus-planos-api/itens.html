@@ -9,21 +9,27 @@
 <body>
     <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="pedidos.html">Pedidos</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="itens.html">Itens</a></li>
         <li><a href="categorias.html">Categorias</a></li>
         <li><a href="#about"></a></li>
     </ul>
 
     <div class="formulario">
-        <h3>Cadastro de Pedido</h3>
-        <label for="nome">Nome do Cliente</label>
-        <input type="text" id="nome" name="nome">
-        <button type="button" id="botaoEnviar" class="button button-enviar">Cadastrar pedido</button>
+        <h3>Cadastro de Tarefa</h3>
+        <label for="tarefa">Tarefa a ser feita</label>
+        <input type="text" id="tarefa" name="tarefa"> 
+
+        <br><br>
+
+        <label for="selecao">Categoria</label> 
+        <select name="selecao" id="selecao">
+        </select>
+
+        <button type="button" id="botaoEnviar" class="button button-enviar">Cadastrar tarefa</button>
     </div>
 
     <div id="resposta"></div>
 
 </body>
-<script src="./assets/js/pedidos.js"></script>
+<script src="./assets/js/itens.js"></script>
 </html>

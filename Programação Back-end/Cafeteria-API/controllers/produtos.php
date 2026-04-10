@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__DIR__) . '/database.php';
+require_once 'database.php';
 $database = new Database();
 
 $method   = $_SERVER['REQUEST_METHOD'];
@@ -15,14 +15,13 @@ if (isset($segments[2])) {
 }
 
 switch($method){
-
     // -------------------------------------------------------
     // GET /produtos 
     // GET /produtos/1
     // -------------------------------------------------------
     case 'GET':
         $resultado = $database->executeQuery('SELECT * FROM produtos');
-        $produtos = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        $produtos = $resultado->fetchAll();
 
         echo json_encode([
             'status' => 'success',
@@ -30,50 +29,51 @@ switch($method){
         ]);
         break;
     // -------------------------------------------------------
-    // POST /produtos
+    // POST /categorias
     // Body: { "nome": "Bebidas" }
     // -------------------------------------------------------
     case 'POST':
         $body = json_decode(file_get_contents('php://input'), true);
         
-        $nome = $body['nome'];
-        $preco = $body['preco'];
-        $idCategoria = $body['selectId']; 
-        $disponivel = $body['disponivel'];
+        $nome = trim($body['nome']);
+        $preco = trim($body['preco']);
+        $categoria_id = trim($body['categoria_id']);
+        $disponivel = trim($body['disponivel']);
 
-        if(!$nome){
-            echo json_encode([
-                'status' => 'error',
-                'message' => 'Campo nome não informado'
-            ]);
-            break;
-        }
+    if (!isset($nome, $preco, $categoria_id, $disponivel)) {
+        echo json_encode([
+            'status' => 'error',
+            'message' => 'Todos os campos são obrigatórios'
+        ]);
+        break;
+    }
         $database->executeQuery(
-            "INSERT INTO produtos (nome, preco, categoria_id, disponivel) VALUES (:nome, :preco, :idCategoria, :disponivel)",
-            [ ':nome' => $nome, 
-              ':preco' => $preco,
-              ':idCategoria' => $idCategoria,
-              ':disponivel' => $disponivel
-            ]
+            "INSERT INTO produtos (nome, preco, categoria_id, disponivel) 
+            VALUES (:nome, :preco, :categoria_id, :disponivel)",
+            [
+             ':nome' => $nome ,
+             ':preco' => $preco,
+             ':categoria_id' => $categoria_id,
+             ':disponivel' => $disponivel  ]
         );
 
         http_response_code(201);
         echo json_encode([
             'status' => 'success',
             'message' => 'Produto cadastrado com sucesso',
-            'idProduto' => $database->lastInsertId()
+            'idProdutos' => $database->lastInsertId()
         ]);
         
         break;
     // -------------------------------------------------------
-    // PUT /produtos/1
+    // PUT /categorias/1
     // Body: { "nome": "Salgados" }
     // -------------------------------------------------------
     case 'PUT':
         
         break;
     // -------------------------------------------------------
-    // DELETE /produtos/1
+    // DELETE /categorias/1
     // -------------------------------------------------------
     case 'DELETE':
         if (!$id) {

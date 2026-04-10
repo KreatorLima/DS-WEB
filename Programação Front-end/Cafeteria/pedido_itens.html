@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Itens do Pedido | Cafeteria</title>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="pedidios.html">Pedidos</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="categorias.html">Categorias</a></li>
+    </ul>
+
+    <div class="formulario">
+        <h3 id="titulo-pedido">Carregando...</h3>
+        <a href="pedidios.html" class="button button-enviar" style="display:inline-block; margin-bottom:10px;">Voltar para Pedidos</a>
+    </div>
+
+    <div id="area-itens" class="tabela"></div>
+    <div id="total-pedido" class="tabela" style="margin-top:12px;"></div>
+
+    <div class="formulario" style="margin-top:24px;">
+        <h4>Adicionar Item ao Pedido</h4>
+
+        <label for="selectProd">Produto</label>
+        <select id="selectProd">
+            <option value="">Selecione um produto</option>
+        </select>
+
+        <label for="qtdProd">Quantidade</label>
+        <input type="number" id="qtdProd" value="1" min="1">
+
+        <button id="btnAdicionar" class="button button-enviar">Adicionar Item</button>
+    </div>
+
+<script src="./assets/js/pedido_itens.js"></script>
+</body>
+</html>

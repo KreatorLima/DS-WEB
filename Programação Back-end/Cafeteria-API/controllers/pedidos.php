@@ -1,12 +1,6 @@
-<?php
+﻿<?php
 
-header('Content-Type: application/json'); // Define o tipo de conteúdo da resposta como JSON
-header('Access-Control-Allow-Origin: *'); // Permite requisições de qualquer origem (CORS)
-header('Access-Control-Allow-Headers: Content-Type'); // Permite receber Content-Type no Header
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Define os métodos HTTP permitidos
-
-
-require_once dirname(__DIR__) . '/database.php';
+require_once 'database.php';
 $database = new Database();
 
 $method   = $_SERVER['REQUEST_METHOD'];
@@ -14,20 +8,16 @@ $path     = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $path     = trim($path, '/');
 $segments = explode('/', $path);
 
-if (isset($segments[2])) {
-    $id = $segments[2];
-} else {
-    $id = null;
-}
+$id = (count($segments) > 0 && is_numeric(end($segments))) ? end($segments) : null;
 
 switch($method){
     // -------------------------------------------------------
-    // GET /pedidos 
-    // GET /pedidos/1
+    // GET /categorias 
+    // GET /categorias/1
     // -------------------------------------------------------
     case 'GET':
         $resultado = $database->executeQuery('SELECT * FROM pedidos');
-        $pedidos = $resultado->fetchAll(PDO::FETCH_ASSOC);
+        $pedidos = $resultado->fetchAll(PDO::FETCH_ASSOC); // Busca os dados
 
         echo json_encode([
             'status' => 'success',
@@ -35,17 +25,17 @@ switch($method){
         ]);
         break;
     // -------------------------------------------------------
-    // POST /pedidos
+    // POST /categorias
     // Body: { "nome": "Bebidas" }
     // -------------------------------------------------------
     case 'POST':
         $body = json_decode(file_get_contents('php://input'), true);
-        $$cliente = isset($body['cliente']) ? trim($body['cliente']) : '';
+        $cliente = isset($body['cliente']) ? trim($body['cliente']) : null;
 
         if(!$cliente){
             echo json_encode([
                 'status' => 'error',
-                'message' => 'Campo nome não informado'
+                'message' => 'Campo nome nÃ£o informado'
             ]);
             break;
         }
@@ -58,26 +48,26 @@ switch($method){
         echo json_encode([
             'status' => 'success',
             'message' => 'Pedido cadastrado com sucesso',
-            'idPedido' => $database->lastInsertId()
+            'idPedidos' => $database->lastInsertId()
         ]);
         
         break;
     // -------------------------------------------------------
-    // PUT /pedidos/1
+    // PUT /categorias/1
     // Body: { "nome": "Salgados" }
     // -------------------------------------------------------
     case 'PUT':
         
         break;
     // -------------------------------------------------------
-    // DELETE /pedidos/1
+    // DELETE /categorias/1
     // -------------------------------------------------------
     case 'DELETE':
         if (!$id) {
             http_response_code(400);
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'Informe o id da pedido na URL.'
+                'message' => 'Informe o id do Pedido na URL.'
             ]);
             break;
         }
@@ -91,7 +81,7 @@ switch($method){
             http_response_code(404);
             echo json_encode([
                 'status'  => 'error',
-                'message' => 'Pedido não encontrada.'
+                'message' => 'Pedido não encontrado.'
             ]);
             break;
         }
@@ -102,13 +92,13 @@ switch($method){
         ]);
         break;
     // -------------------------------------------------------
-    // Método não permitido
+    // MÃ©todo nÃ£o permitido
     // -------------------------------------------------------
     default:
         http_response_code(405);
         echo json_encode([
             'status'  => 'error',
-            'message' => 'Método não permitido.'
+            'message' => 'MÃ©todo nÃ£o permitido.'
         ]);
 }
 

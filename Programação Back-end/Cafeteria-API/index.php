@@ -1,8 +1,9 @@
 <?php
 
 header('Content-Type: application/json'); // Define o tipo de conteúdo da resposta como JSON
+
 header('Access-Control-Allow-Origin: *'); // Permite requisições de qualquer origem (CORS)
-header('Access-Control-Allow-Headers: Content-Type'); // Permite receber Content-Type no Header
+header("Access-Control-Allow-Headers: Content-Type "); // Permite requisições de qualquer origem (CORS)
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Define os métodos HTTP permitidos
 
 $method = $_SERVER['REQUEST_METHOD']; // Captura o método HTTP da requisição atual (GET, POST, etc.)
@@ -33,14 +34,15 @@ switch ($endpoint) {
     case 'produtos':
         require_once 'controllers/produtos.php';
         break;
-
+    
     case 'pedidos':
         require_once 'controllers/pedidos.php';
         break;
-
-    case 'pedido':
-        require_once 'controllers/pedido.php';
+            
+    case 'pedido_itens':
+        require_once 'controllers/pedido_itens.php';
         break;
+
 
     default:
         http_response_code(404);

@@ -5,24 +5,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h2, p {
-  margin: 10px;
-}
+h2, p { margin: 10px; }
 
-
-
-/* ========== Estilização para o Menu ========== */
+/* Menu */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #434846;
+  background-color: #333;
 }
 
-ul li {
-  float: left;
-}
+ul li { float: left; }
 
 ul li a {
   display: block;
@@ -32,64 +26,51 @@ ul li a {
   text-decoration: none;
 }
 
-ul li a:hover {
-  background-color: #111111;
-}
+ul li a:hover { background-color: #111; }
 
-/* Estilização para o Formulário */
-.formulario{
+/* Formulario */
+.formulario {
   width: 500px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
 }
 
-.formulario h3 {
-  text-align: center;
-}
+.formulario h3 { text-align: center; }
 
+label { display: block; }
 
-/* Estilização para os campos do Formulário */
-
-label {display: block;}
-
-input[type=text] {
+input[type=text],
+input[type=number],
+select {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin: 10px 0;
   box-sizing: border-box;
-  border: 2px solid;
+  border: 2px solid #ccc;
   border-radius: 8px;
+  font-size: 15px;
 }
 
-/* Estilização para o botão do formulário */
-
+/* Botoes */
 .button {
   background-color: white;
   border: none;
   color: black;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  padding: 10px;
   font-size: 16px;
   margin: 4px 2px;
-  transition-duration: 0.4s;
+  transition: 0.3s;
   cursor: pointer;
-
 }
 
-.button-enviar {
-  border: 2px solid #04AA6D;
+.button-enviar { border: 2px solid #04AA6D; }
 
-}
 .button-enviar:hover {
   background-color: #04AA6D;
   color: white;
 }
 
-/* ========== Estilização da tabela de Dados ========== */
-
-.tabela{
+/* Tabela */
+.tabela {
   width: 700px;
   margin: 0 auto;
 }
@@ -104,9 +85,9 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(even) { background-color: #f2f2f2; }
 
-tr:hover {background-color: #ddd;}
+tr:hover { background-color: #ddd; }
 
 th {
   padding-top: 12px;
@@ -114,47 +95,4 @@ th {
   text-align: left;
   background-color: #04AA6D;
   color: white;
-}
-
-
-/* Estilização para os campos do Formulário */
-label {
-  display: block;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Agrupando todos os campos de entrada */
-input[type=text], 
-input[type=number], 
-select {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-/* Estilo específico para o checkbox não ficar gigante */
-input[type=checkbox] {
-  transform: scale(1.2);
-  margin-left: 5px;
-  cursor: pointer;
-}
-
-/* ========== Estilização da tabela de Dados ========== */
-/* Adicione isso para a tabela não ficar grudada no formulário */
-.tabela {
-  width: 700px;
-  margin: 20px auto; 
-  padding-bottom: 50px;
-}
-
-#nomeCliente {
-    text-align: center;
-    width: 100%;
-    font-size: 20px; /* Opcional: para dar mais destaque */
-    margin-bottom: 20px; /* Opcional: para afastar do formulário */
 }

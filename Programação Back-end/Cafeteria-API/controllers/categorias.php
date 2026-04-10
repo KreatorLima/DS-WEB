@@ -1,12 +1,6 @@
 <?php
 
-header('Content-Type: application/json'); // Define o tipo de conteúdo da resposta como JSON
-header('Access-Control-Allow-Origin: *'); // Permite requisições de qualquer origem (CORS)
-header('Access-Control-Allow-Headers: Content-Type'); // Permite receber Content-Type no Header
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Define os métodos HTTP permitidos
-
-
-require_once dirname(__DIR__) . '/database.php';
+require_once 'database.php';
 $database = new Database();
 
 $method   = $_SERVER['REQUEST_METHOD'];

@@ -29,9 +29,9 @@ class Database extends PDO
         }
     }
 
-    private function setParameters($stmt, $key, $value)
+    private function setParameters($produtos, $key, $value)
     {
-        $stmt->bindValue($key, $value);
+        $produtos->bindValue($key, $value);
     }
 
     private function mountQuery($stmt, $parameters)
@@ -43,9 +43,9 @@ class Database extends PDO
 
     public function executeQuery(string $query, array $parameters = [])
     {
-        $stmt = $this->prepare($query);
-        $this->mountQuery($stmt, $parameters);
-        $stmt->execute();
-        return $stmt;
+        $produtos = $this->prepare($query);
+        $this->mountQuery($produtos, $parameters);
+        $produtos->execute();
+        return $produtos;
     }
 }
